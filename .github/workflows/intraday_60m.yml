@@ -1,4 +1,4 @@
-name: Intraday 15m Reverse-Chance Notify
+name: Intraday 60m Reverse-Chance Notify
 
 on:
   schedule:
