@@ -1,0 +1,15 @@
+import os
+import requests
+from datetime import datetime
+
+SLACK_WEBHOOK_URL = os.getenv("SLACK_WEBHOOK_URL")
+ALPHAVANTAGE_API_KEY = os.getenv("ALPHAVANTAGE_API_KEY")
+
+def main():
+    # テスト通知
+    msg = f"✅ GitHub Actionsテスト通知: {datetime.now()}"
+    requests.post(SLACK_WEBHOOK_URL, json={"text": msg})
+    print("sent")
+
+if __name__ == "__main__":
+    main()
